@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MONICA MARTINEZ ALCOCER</title>
+    <link rel='stylesheet' href='estilos.css'>
+    <link rel='stylesheet' href='movil.css'>
+    <script src='https://kit.fontawesome.com/d188054eba.js' crossorigin='anonymous'></script>
+    <script src='https://code.jquery.com/jquery-3.7.1.js' crossorigin='anonymous'></script>
+</head>
+<body>
+    <header>
+        <figure>
+            <img src="imagenes/logo.jpg" alt="Texto descriptivo">
+        </figure>
+    </header>
+    <main>
+        <section class="seccionInformacion">
+            <h1>Our Team</h1>
+            <h2>A Dedicated Team of Experts</h2>
+            <br>
+            <p>Passion, experience and a fierce commitment to education are the cornerstones of our success in the beauty industry</p>
+            <br>
+            <p>We believe that being the largest SPA in the area is not enough in itself to satisfy the needs of our customers. For this reason we have bult up a staff of specialized professionals who are proud to welcome you to our hotel, present What We Do, listen to your needs and guarantee well-being and relaxation during your stay at our SPA Resort.</p>
+            <br>
+            <p>Everyone in our team is a certified specialist capable of delivering a unique service of high quality you won't find anywhere else in modern spa and resort industry.</p>
+            <div class="conBotones">
+                <a href="">LEARN MORE</a>
+                <a href="">VIEW ALL TEAM</a>
+            </div>
+        </section>
+        <section class="personal">
+            <article>
+                <figure>
+                    <img src="imagenes/foto1.jpg" alt="Texto descriptivo">
+                </figure>
+                <h3>Jessica Cooper</h3>
+                <p>Esthetician</p>
+                <div class="conRedes">
+                    <a href="https://www.facebook.com/" target="_blank"><i class='fa-brands fa-facebook'></i></a>
+                    <a href="https://www.x.com" target="_blank"><i class='fa-brands fa-twitter'></i></a>
+                    <a href="https://www.tiktok.com" target="_blank"><i class='fa-brands fa-tiktok'></i></a>
+                </div>
+            <div class="conBotones">
+                <a href="#" id="boton_modal">GET IN TOUCH</a>
+            </div>
+            </article>
+            <article>
+                <figure>
+                    <img src="imagenes/foto2.jpg" alt="Texto descriptivo">
+                </figure>
+                <h3>Robert Wagner</h3>
+                <p>Hairdresser</p>
+                <div class="conRedes">
+                    <a href="https://www.facebook.com/" target="_blank"><i class='fa-brands fa-facebook'></i></a>
+                    <a href="https://www.x.com" target="_blank"><i class='fa-brands fa-twitter'></i></a>
+                    <a href="https://www.tiktok.com" target="_blank"><i class='fa-brands fa-tiktok'></i></a>
+                </div>
+            <div class="conBotones">
+                <a href="#" id="boton_modal">GET IN TOUCH</a>
+            </div>
+            </article>
+        </section>
+    </main>
+    <section id="modal" class="contModal">
+        <div class="alineacion_cerrar">
+            <i id="cerrar_modal" class="cerrarmodal fas fa-times-circle"></i>
+        </div>
+        <br><br>
+        <h2>Contact Us</h2>
+        <p>If you have any questions concerning our services, please fill out the contact form below.</p>
+        <form action="#" method="post">
+            <input type="text" placeholder="Name *" required>
+            <input type="text" placeholder="E-mail *" required>
+            <textarea name="textarea" id="textarea" placeholder="Message *" required></textarea>
+            <button>SUBMIT</button>
+        </form>
+    </section>
+    <footer> <H2>MONICA MARTINEZ 9SC</H2></footer>
+    <script>
+
+        $("#boton_modal").click(function () {
+            $("#modal").addClass("mostrar");
+        })
+
+        $("#cerrar_modal").click(function () {
+            $("#modal").removeClass("mostrar");
+        })
+
+        // por tiempo 5 segundos
+        function tiempo() {
+            $("#modal").addClass("mostrar");
+        }
+        setTimeout(tiempo, 10000);
+        // click por fuera
+        window.onclick = function (event) {
+        if (event.target == modal) {
+            $("#modal").removeClass("mostrar");
+        }
+        };
+        // click tecla ESC
+        document.addEventListener('keydown', function (event) {
+        if (event.key === 'Escape') {
+            $("#modal").removeClass("mostrar");
+        }
+        });
+
+        // scroll mas de 600px
+        function onScroll() {
+        const scrollTop = window.scrollY;
+
+        if (scrollTop > 600) {
+            $("#modal").addClass("mostrar");
+        }
+        }
+        window.addEventListener('scroll', onScroll);
+
+    </script>
+</body>
+</html>
